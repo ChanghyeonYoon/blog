@@ -1,25 +1,95 @@
 {
-  "name": "blog",
+  "name": "developer-blog",
   "version": "0.1.0",
   "private": true,
+  "description": "Developer Blog",
+  "author": "ChanghyeonYoon <hyeon120411@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ChanghyeonYoon/blog",
+  "bugs": {
+    "url": "https://github.com/ChanghyeonYoon/blog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanghyeonYoon/blog.git"
+  },
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier '**/*.{js,jsx,ts,tsx}' --fix",
+    "stylelint": "stylelint '**/*.{css}' --fix",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css}": [
+      "stylelint --fix"
+    ]
   },
   "dependencies": {
+    "@headlessui/react": "latest",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.19",
+    "@tanstack/react-query": "^4.35.0",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "@vercel/og": "^0.5.13",
     "autoprefixer": "10.4.15",
+    "disqus-react": "^1.1.5",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
+    "firebase": "^10.3.1",
+    "framer-motion": "^10.16.4",
+    "github-markdown-css": "^5.2.0",
+    "gsap": "^3.12.2",
     "next": "13.4.19",
+    "next-seo": "^6.1.0",
+    "next-sitemap": "^4.2.3",
     "postcss": "8.4.29",
+    "prism-react-renderer": "^2.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rss": "^1.2.2",
+    "swr": "^2.2.2",
     "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
+    "three": "^0.156.1",
+    "typescript": "5.2.2",
+    "use-dark-mode": "^2.3.1",
+    "usehooks-ts": "^2.9.1"
+  },
+  "packageManager": "yarn@3.6.3",
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/babel__core": "^7",
+    "@types/babel__preset-env": "^7",
+    "@types/prettier": "^3",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "babel-loader": "latest",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "dependenciesMeta": {
+    "eslint@8.49.0": {
+      "unplugged": true
+    }
   }
 }
