@@ -35,6 +35,7 @@ You can deploy this project anywhere you want. (Vercel, Amplify, etc...)
 - [disqus-react](https://www.npmjs.com/package/disqus-react) - For Comment
 - [Firebase](https://firebase.google.com/) - For Analytics
 - [Microsoft Clarity](https://clarity.microsoft.com/) - For RUM
+- [Datadog](https://www.datadoghq.com/) - For RUM
 - [prettier](https://prettier.io/) - For Code Formatter
 - [eslint](https://eslint.org/) - For Code Linter
 - [stylelint](https://stylelint.io/) - For Style Linter
