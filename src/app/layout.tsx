@@ -3,6 +3,8 @@ import { CustomHead } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
+import { CLARITY_SCRIPT } from '@/constants'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +21,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <CustomHead />
+      <Script id='ms-clarity' strategy='afterInteractive'>
+        {CLARITY_SCRIPT}
+      </Script>
       <body className={inter.className}>{children}</body>
     </html>
   )
