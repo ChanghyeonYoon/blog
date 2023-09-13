@@ -42,14 +42,9 @@ const CustomHead = () => {
   }, [])
   return (
     <Head>
-      <Script
-        id='ms-clarity'
-        strategy='afterInteractive'
-        type='text/javascript'
-        dangerouslySetInnerHTML={{
-          __html: CLARITY_SCRIPT
-        }}
-      />
+      <Script id='ms-clarity' strategy='afterInteractive'>
+        {CLARITY_SCRIPT}
+      </Script>
     </Head>
   )
 }
